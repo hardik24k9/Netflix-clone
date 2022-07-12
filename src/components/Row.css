@@ -1,0 +1,37 @@
+.row{
+    margin-left: 20px;
+    color: white;
+}
+
+.row_posters{
+    display:flex;
+    overflow-y: hidden;
+    overflow-x: scroll; /* for making the scroll through x-axis without scrolling the page */
+    padding: 20px;
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none; /* it used to hide the scrollbar on all browsers and keep the functionality */
+}
+
+.row_poster{
+    object-fit: contain; /* object-fit is used to maintain the aspect ratio*/ 
+    width: 100%;
+    max-height: 100px; 
+    margin-right: 10px;
+    transition: transform 450ms; /* for smooth a transition whenever it refreshes */
+}
+
+.row_poster:hover{
+    transform: scale(1.08); 
+    /* to make it grow using scale property since we have combined 
+       transform with the transition property we get a smooth hover experience */
+}
+
+.row_posterLarge{
+    max-height: 250px;
+}
+
+.row_posterLarge:hover{
+    transform: scale(1.09);
+}
